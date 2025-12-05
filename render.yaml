@@ -1,0 +1,55 @@
+services:
+  - type: web
+    name: saml-sso-demo
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+```
+- Click **"Commit new file"**
+
+✅ **Now you have all 3 files in your GitHub repo!**
+
+---
+
+## 🚀 **CONNECT GITHUB TO RENDER:**
+
+1. Go to **https://render.com**
+2. Sign in (use your GitHub account)
+3. Click **"New +"** → **"Web Service"**
+4. Click **"Connect GitHub"** 
+5. Select your `saml-sso-demo` repository
+6. Click **"Connect"**
+7. Render will **auto-detect** the files
+8. Click **"Deploy"**
+9. **Wait 2-3 minutes**
+10. **Done!** You'll get a URL like: `https://saml-sso-demo.onrender.com`
+
+---
+
+## ✅ **OPTION 2: Create on Your Computer (Then Upload)**
+
+### **Step-by-Step:**
+
+1. **Create a folder** on your computer:
+   - Windows: Right-click Desktop → New → Folder → Name it `saml-project`
+   - Mac: Desktop → Right-click → New Folder → Name it `saml-project`
+
+2. **Open Notepad (Windows) or TextEdit (Mac)**
+
+3. **Create File 1:**
+   - Paste the SAML code (from artifact)
+   - Save As → Navigate to `saml-project` folder
+   - File name: `app.py`
+   - Save type: **"All Files"** (important!)
+   - Click Save
+
+4. **Create File 2:**
+   - Open new Notepad/TextEdit
+   - Paste:
+```
+   Flask==3.0.0
+   python3-saml==1.15.0
+   gunicorn==21.2.0
