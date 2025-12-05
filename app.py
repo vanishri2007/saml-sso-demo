@@ -2,6 +2,10 @@ from flask import Flask, Response
 
 app = Flask(__name__)
 
+@app.route("/test")
+def test():
+    return "Flask is working!"
+
 @app.route("/metadata")
 def metadata():
     xml_str = """<EntityDescriptor entityID="https://rare-nourishment.up.railway.app/metadata">
