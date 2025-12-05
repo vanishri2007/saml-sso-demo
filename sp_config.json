@@ -10,7 +10,6 @@
       },
       "allow_unsolicited": true
     }
-  },
-  "key_file": "sp.key",
-  "cert_file": "sp.crt"
+  }
 }
+
