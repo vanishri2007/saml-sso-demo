@@ -1,4 +1,5 @@
 from flask import Flask, Response
+import os
 
 app = Flask(__name__)
 
@@ -16,6 +17,6 @@ def metadata():
     return Response(xml_str, content_type="text/xml")
 
 if __name__ == "__main__":
-    import os
+    # Railway assigns a dynamic port via the PORT environment variable
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
