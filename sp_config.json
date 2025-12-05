@@ -1,0 +1,16 @@
+{
+  "entityid": "https://rare-nourishment.up.railway.app/metadata",
+  "service": {
+    "sp": {
+      "name": "My SP",
+      "endpoints": {
+        "assertion_consumer_service": [
+          ["https://rare-nourishment.up.railway.app/acs", "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"]
+        ]
+      },
+      "allow_unsolicited": true
+    }
+  },
+  "key_file": "sp.key",
+  "cert_file": "sp.crt"
+}
